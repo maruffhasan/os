@@ -1,0 +1,6 @@
+
+git clone https://github.com/mit-pdos/xv6-riscv.git
+make clean; make qemu
+git add --all; git diff HEAD > ../test.patch
+git apply --whitespace=fix ../test.patch
+git clean -fdx; git reset --hard
